@@ -11,7 +11,7 @@ def read_token():
         return lines[0].strip()
 
 
-token = read_token()
+token = process.env.arcadia
 
 
 client = discord.Client()
@@ -209,4 +209,4 @@ async def on_message(message):
 
 
 
-client.run(tokenlolol)
+client.run(process.env.token)
