@@ -6,18 +6,12 @@ import discord
 from discord import Member, Guild, guild, reaction
 
 
-token = int(os.environ.get('token')
-
-            
-def read_token():
-    with open("token.txt", "r") as f:
-        lines = f.readlines()
-        return lines[0].strip()
-            
-
 client = discord.Client()
 
 
+token = int(os.environ.get('token')
+
+            
 memes = ['https://youtu.be/nj68JZsTzOI', 'https://www.youtube.com/watch?v=hM3j5IculHE', 'https://youtu.be/wn3xTzFIdVs',
          'https://www.youtube.com/watch?v=ERw2kMMHNmE', 'https://youtu.be/-_7Cpt7fPMU',
          'https://www.youtube.com/watch?v=osxsfgWgqQY', 'https://youtu.be/oYto8hKZpSY', 'https://youtu.be/Cwkej79U3ek',
