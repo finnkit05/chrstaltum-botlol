@@ -12,19 +12,12 @@ client = discord.Client()
 token = int(os.environ.get('token')
 
             
-memes = ['https://youtu.be/nj68JZsTzOI', 'https://www.youtube.com/watch?v=hM3j5IculHE', 'https://youtu.be/wn3xTzFIdVs',
-         'https://www.youtube.com/watch?v=ERw2kMMHNmE', 'https://youtu.be/-_7Cpt7fPMU',
-         'https://www.youtube.com/watch?v=osxsfgWgqQY', 'https://youtu.be/oYto8hKZpSY', 'https://youtu.be/Cwkej79U3ek',
-         'https://www.youtube.com/watch?v=X_nJ5ksFVbg', 'https://youtu.be/PyuWeE2ljYo',
-         'https://www.youtube.com/watch?v=dQw4w9WgXcQ', 'https://www.youtube.com/watch?v=IwzUs1IMdyQ',
-         'https://www.youtube.com/watch?v=gJLIiF15wjQ', 'https://www.youtube.com/watch?v=cPJUBQd-PNM',
-         'https://www.youtube.com/watch?v=dP9Wp6QVbsk', 'https://youtu.be/o7B5wLKzHMs',
-         'https://www.youtube.com/watch?v=__X3EXXK7HU',
-         'https://www.youtube.com/watch?v=2HzkrHiQTD8&list=WL&index=11&t=0s',
-         'https://www.youtube.com/watch?v=ye5BuYf8q4o', 'https://www.youtube.com/watch?v=BulFwGSi8bc',
-         'https://www.youtube.com/watch?v=BulFwGSi8bc']
+@client.event
+async def on_ready():
+    print('{} ist ready, Diggah!'.format(client.user.name))
+    client.loop.create_task(status_task()
 
-
+                            
 antworten = ['Jo', 'Nö', 'Du bist einfach zu dumm, da kann ich keine Antwort nennen.', 'Woher soll ich das wissen?',
              'Nur, wenn Du ganz fest dran glaubst...', 'Was, worum gehts? War grad meinen Darm entleeren.',
              'Guck mal, ein Einhorn!',
@@ -38,10 +31,7 @@ smalltalk = ['Ja ich weiß, ist nicht ganz so aktuell, aber Gott halt will kein 
              'huch, war die falsche']
 
 
-@client.event
-async def on_ready():
-    print('{} ist ready, Diggah!'.format(client.user.name))
-    client.loop.create_task(status_task())
+)
 
 
 async def status_task():
