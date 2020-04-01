@@ -38,13 +38,6 @@ smalltalk = ['Ja ich weiß, ist nicht ganz so aktuell, aber Gott halt will kein 
              'huch, war die falsche']
 
 
-react_count1 = 1
-
-
-def krassdigger():
-    react_count1 = 2
-
-
 @client.event
 async def on_ready():
     print('{} ist ready, Diggah!'.format(client.user.name))
