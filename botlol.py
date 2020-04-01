@@ -210,4 +210,4 @@ async def on_message(message):
 
 
 
-client.run(process.env.token)
+client.run(token)
